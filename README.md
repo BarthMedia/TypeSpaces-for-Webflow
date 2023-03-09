@@ -10,6 +10,12 @@ Minimalist template repository for building rich native JavaScript/jQuery applic
 
 <br>
 
+## Codespaces for Webflow
+
+If you are new to the world of JavaScript programming in Webflow, here is a more beginner-friendly version of this template --> https://github.com/BarthMedia/codespaces-for-webflow
+
+<br>
+
 ## How do you start? (GitHub Codespaces)
 
 You need to click "Use this template" --> "Open in a codespace" --> Wait 30 seconds to two minutes for everything to install automatically --> Type "npm start" in terminal --> Press "http://localhost:1234" --> You will be taken to a bmg.studio documentation page where you need to click "Copy snippet to clipboard" --> Paste this snippet into the header code of your page/project settings --> Publish your Webflow project --> Go back to the bmg.studio documentation page and press "Continue to Webflow.io"

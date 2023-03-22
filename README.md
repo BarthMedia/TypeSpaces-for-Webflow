@@ -61,3 +61,7 @@ A minimalist template repository for building rich native JavaScript/jQuery appl
 5. Add your GitHub repository as the remote origin using `git remote add origin https://github.com/USER/REPO.git`.
 6. Set the remote URL using `git remote set-url origin https://github.com/USER/REPO.git`.
 7. Push your changes to GitHub using `git push origin main`.
+
+
+git pull https://github.com/BarthMedia/studioForm.git main
+(For updating your local git incase someone made changes to the GitHub version in the mean times)

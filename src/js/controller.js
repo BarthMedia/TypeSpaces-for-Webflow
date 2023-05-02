@@ -5,10 +5,23 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 // Custom
-import view from './views/view.js';
+import loader from './utils/loader.js';
 import * as model from './model.js';
+import view from './views/view.js';
 
 // + Functions +
+
+// Main
+const main = function () {
+  // Initialize model
+  model.init();
+
+  // Initialize view
+  view.init(model.state.data);
+
+  // Test
+  controlTest();
+};
 
 // Control test
 const controlTest = async function () {
@@ -31,6 +44,6 @@ const controlTest = async function () {
 
 // + Initialize +
 const init = function () {
-  view.addHandler(controlTest);
+  view.addHandler(main);
 };
-init();
+loader(init);

@@ -28,7 +28,7 @@ A minimalist template repository for building rich native JavaScript/jQuery appl
 3. Press `http://localhost:1234`.
 4. Follow the instructions on the bmg.studio documentation page to integrate with your Webflow project.
 
-*Make sure you have npm installed: [https://nodejs.org/en/download](https://nodejs.org/en/download)*
+_Make sure you have npm installed: [https://nodejs.org/en/download](https://nodejs.org/en/download)_
 
 ---
 
@@ -52,7 +52,7 @@ A minimalist template repository for building rich native JavaScript/jQuery appl
 
 ### Using Git
 
-*Make sure you have Git installed: [https://git-scm.com/downloads](https://git-scm.com/downloads)*
+_Make sure you have Git installed: [https://git-scm.com/downloads](https://git-scm.com/downloads)_
 
 1. Initialize the Git repository using `git init`.
 2. Rename the default branch to `main` using `git branch -m master main`.
@@ -62,6 +62,10 @@ A minimalist template repository for building rich native JavaScript/jQuery appl
 6. Set the remote URL using `git remote set-url origin https://github.com/USER/REPO.git`.
 7. Push your changes to GitHub using `git push origin main`.
 
-
 git pull https://github.com/BarthMedia/studioForm.git main
 (For updating your local git incase someone made changes to the GitHub version in the mean times)
+
+### Additional Handy Git Functions
+
+`rm -fr .git` // To remove an existing Git instance (and nest it in other Git folders)
+`https://github.com/USER/REPO.git` // To fetch the latest version of a GitHub project

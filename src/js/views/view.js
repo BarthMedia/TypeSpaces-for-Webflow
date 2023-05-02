@@ -9,8 +9,22 @@ import * as config from '../config.js';
 
 // Base WebflowView
 class WebflowView {
-  // ELements
-  #body = $(config.BODY_SELECTOR);
+  // Initialize
+  init(stateData) {
+    // Values
+    const _this = this;
+
+    // Elements
+    this.#elements = stateData.elements;
+  }
+
+  // Define
+  #elements;
+
+  // Event listeners
+  addHandler(handler, events = ['load'], object = window) {
+    events.forEach(event => object.addEventListener(event, handler));
+  }
 
   // Values
   string = 'hello, world!';
@@ -19,14 +33,7 @@ class WebflowView {
 
   // Test
   consoleLog(message = this.string) {
-    console.log(this.#body, message);
-  }
-
-  // Event listeners
-  addHandler(handler) {
-    ['hashchange', 'load'].forEach(event =>
-      window.addEventListener(event, handler)
-    );
+    console.log(this.#elements.body, message);
   }
 }
 

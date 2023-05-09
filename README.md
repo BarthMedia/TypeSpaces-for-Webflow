@@ -67,5 +67,5 @@ git pull https://github.com/BarthMedia/studioForm.git main
 
 ### Additional Handy Git Functions
 
-`rm -fr .git` // To remove an existing Git instance (and nest it in other Git folders)
+`rm -fr .git` (Mac) or `rmdir .git -force` (Windows) // To remove an existing Git instance (and e.g. nest it in other Git folders)
 `https://github.com/USER/REPO.git` // To fetch the latest version of a GitHub project

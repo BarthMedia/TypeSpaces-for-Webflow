@@ -6,6 +6,7 @@ import { async } from 'regenerator-runtime';
 // Custom
 import * as config from './config.js';
 import returnElements from './utils/returnElements.js';
+import returnStyles from './utils/returnStyles.js';
 import { getJson } from './helper';
 
 // + Objects +
@@ -24,6 +25,7 @@ export const init = function () {
 
   // Set
   stateData.elements = returnElements();
+  stateData.styles = returnStyles(stateData.elements);
 };
 
 // Test data

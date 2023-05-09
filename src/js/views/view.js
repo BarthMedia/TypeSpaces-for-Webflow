@@ -13,6 +13,7 @@ class WebflowView {
   init(stateData) {
     // Values
     const _this = this;
+    this.#styles = stateData.styles;
 
     // Elements
     this.#elements = stateData.elements;
@@ -20,6 +21,7 @@ class WebflowView {
 
   // Define
   #elements;
+  #styles;
 
   // Event listeners
   addHandler(handler, events = ['load'], object = window) {
@@ -33,7 +35,7 @@ class WebflowView {
 
   // Test
   consoleLog(message = this.string) {
-    console.log(this.#elements.body, message);
+    console.log(this.#elements.body, message, this.#styles.successColor);
   }
 }
 

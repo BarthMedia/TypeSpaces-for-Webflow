@@ -8,6 +8,32 @@ import * as config from './config.js';
 
 // + Functions +
 
+// String to array
+export function stringToArray(
+  string,
+  splitter = ',',
+  removeWhiteSpaces = true,
+  removeQuotes = true,
+  removeBrackets = true
+) {
+  // - Manipulation -
+
+  // Remove brackets
+  if (removeBrackets) string = string.replace(/[\[\]]/g, '');
+
+  // Remove quotes
+  if (removeQuotes) string = string.replace(/['"]/g, '');
+
+  // Remove white spaces
+  if (removeWhiteSpaces) string = string.replace(/ /g, '').replace(/\n/g, '');
+
+  // Split
+  const arr = splitter !== false ? string.split(splitter) : string;
+
+  // Return
+  return arr;
+}
+
 // Timeout
 export const timeout = function (s) {
   // Return

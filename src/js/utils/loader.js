@@ -1,44 +1,48 @@
 // + Imports +
 
+import { async } from 'regenerator-runtime';
+
 // + Load helper +
 
 // Allows for loading other scripts
-jQuery.loadScript = function (url, callback) {
-  jQuery.ajax({
-    url: url,
-    dataType: 'script',
-    success: callback,
-    async: true,
+function scriptLoader(externalScript = 'foo.js', callback) {
+  const scriptPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    document.head.appendChild(script);
+    script.onload = resolve;
+    script.onerror = reject;
+    script.async = true;
+    script.src = externalScript;
   });
-};
+
+  scriptPromise.then(callback);
+}
 
 // + Exports +
 
 // Loader
 export default function (handler) {
+  // console.log('Hey :D ');
+
   'undefined' === typeof gsap
-    ? $.loadScript(
+    ? scriptLoader(
         'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js',
-        function () {
-          load2ndScript();
-        }
+        load2ndScript
       )
     : load2ndScript();
 
   function load2ndScript() {
-    'undefined' === 'undefined'
-      ? $.loadScript(
-          'https://cdn.jsdelivr.net/gh/BarthMedia/js@main/ScrollToPlugin.min.js',
-          function () {
-            register();
-          }
+    'undefined' === typeof Flip
+      ? scriptLoader(
+          'https://cdn.jsdelivr.net/gh/BarthMedia/js@main/Flip.min.js',
+          register
         )
       : register();
   }
 
   function register() {
     // - Register -
-    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(Flip);
 
     // Fire callback
     handler();

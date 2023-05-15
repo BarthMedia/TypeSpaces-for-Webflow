@@ -22,8 +22,6 @@ function scriptLoader(externalScript = 'foo.js', callback) {
 
 // Loader
 export default function (handler) {
-  // console.log('Hey :D ');
-
   'undefined' === typeof gsap
     ? scriptLoader(
         'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js',

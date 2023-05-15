@@ -24,7 +24,7 @@ class WebflowView {
   #styles;
 
   // Event listeners
-  addHandler(handler, events = ['load'], object = window) {
+  addHandler(handler, events = ['load', 'pageshow'], object = window) {
     events.forEach(event => object.addEventListener(event, handler));
   }
 

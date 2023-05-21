@@ -71,6 +71,6 @@ git pull `https://github.com/USER/REPO.git` main
 
 ---
 
-## When using TypeScript
+## 👨‍💻 When using TypeScript
 
 Be sure to follow these instructions to make `Prettier` work -> [Timo Ernst, Prettier Autoformat for TypeScript not Working](https://dev.to/timo_ernst/prettier-autoformat-for-typescript-not-working-13d8).

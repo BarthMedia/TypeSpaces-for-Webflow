@@ -68,3 +68,9 @@ git pull `https://github.com/USER/REPO.git` main
 ### Additional Handy Git Functions
 
 `rm -fr .git` (Mac) or `rmdir .git -force` (Windows) // To remove an existing Git instance (and e.g. nest it in other Git folders)
+
+---
+
+## When using TypeScript
+
+Be sure to follow these instructions to make `Prettier` work -> `https://dev.to/timo_ernst/prettier-autoformat-for-typescript-not-working-13d8`.

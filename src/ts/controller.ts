@@ -48,6 +48,6 @@ const controlTest = async function () {
 
 // + Initialize +
 const init = function () {
-  view.addHandler(main);
+  main();
 };
 loader(init);

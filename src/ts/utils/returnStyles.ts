@@ -1,8 +1,8 @@
 // + Imports +
-import * as config from '../config.js';
+import * as config from '../config';
 
 // + Exports +
-export default function (elements) {
+export default function (elements: any) {
   // Elments
   const element = elements.body;
 

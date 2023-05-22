@@ -4,14 +4,14 @@
 import { async } from 'regenerator-runtime';
 
 // Custom
-import * as config from './config.js';
+import * as config from './config';
 
 // + Functions +
 
 // String to array
 export function stringToArray(
-  string,
-  splitter = ',',
+  string: string,
+  splitter: any = ',',
   removeWhiteSpaces = true,
   removeQuotes = true,
   removeBrackets = true
@@ -35,7 +35,7 @@ export function stringToArray(
 }
 
 // Timeout
-export const timeout = function (s) {
+export const timeout = function (s: number) {
   // Return
   return new Promise(function (_, reject) {
     // Timeout
@@ -47,10 +47,13 @@ export const timeout = function (s) {
 };
 
 // Return JSON
-export const getJson = async function (url) {
+export const getJson = async function (url: string) {
   try {
     // Values
-    const res = await Promise.race([fetch(url), timeout(config.TIMEOUT_SEC)]);
+    const res: any = await Promise.race([
+      fetch(url),
+      timeout(config.TIMEOUT_SEC),
+    ]);
     const data = await res.json();
 
     // Logic

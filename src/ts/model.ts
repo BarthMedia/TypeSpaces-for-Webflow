@@ -4,9 +4,9 @@
 import { async } from 'regenerator-runtime';
 
 // Custom
-import * as config from './config.js';
-import returnElements from './utils/returnElements.js';
-import returnStyles from './utils/returnStyles.js';
+import * as config from './config';
+import returnElements from './utils/returnElements';
+import returnStyles from './utils/returnStyles';
 import { getJson } from './helper';
 
 // + Objects +
@@ -24,8 +24,8 @@ export const init = function () {
   const stateData = state.data;
 
   // Set
-  stateData.elements = returnElements();
-  stateData.styles = returnStyles(stateData.elements);
+  stateData['elements'] = returnElements();
+  stateData['styles'] = returnStyles(stateData['elements']);
 };
 
 // Test data

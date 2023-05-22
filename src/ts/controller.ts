@@ -5,9 +5,9 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 // Custom
-import loader from './utils/loader.js';
-import * as model from './model.js';
-import view from './views/view.js';
+import loader from './utils/loader';
+import * as model from './model';
+import view from './views/view';
 
 // // + Declare +
 // declare var $: any;

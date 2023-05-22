@@ -2,10 +2,14 @@
 
 import { async } from 'regenerator-runtime';
 
+// + Declare +
+declare var Flip: any;
+declare var gsap: any;
+
 // + Load helper +
 
 // Allows for loading other scripts
-function scriptLoader(externalScript = 'foo.js', callback) {
+function scriptLoader(externalScript = 'foo.js', callback: () => void) {
   const scriptPromise = new Promise((resolve, reject) => {
     const script = document.createElement('script');
     document.head.appendChild(script);
@@ -21,7 +25,7 @@ function scriptLoader(externalScript = 'foo.js', callback) {
 // + Exports +
 
 // Loader
-export default function (handler) {
+export default function (handler: () => void) {
   'undefined' === typeof gsap
     ? scriptLoader(
         'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js',

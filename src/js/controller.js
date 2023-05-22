@@ -9,6 +9,10 @@ import loader from './utils/loader.js';
 import * as model from './model.js';
 import view from './views/view.js';
 
+// // + Declare +
+// declare var $: any;
+// declare var gsap: any;
+
 // + Functions +
 
 // Main

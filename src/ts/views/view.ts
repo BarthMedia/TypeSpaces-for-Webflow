@@ -10,7 +10,7 @@ import * as config from '../config';
 // Base WebflowView
 class WebflowView {
   // Initialize
-  init(stateData) {
+  init(stateData: any) {
     // Values
     const _this = this;
     this.#styles = stateData.styles;

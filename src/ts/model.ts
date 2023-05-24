@@ -12,9 +12,14 @@ import { getJson } from './helper';
 // + Objects +
 
 // State
-export const state = {
-  data: {},
-};
+export const state = new (class {
+  data: {
+    elements: object;
+    styles: object;
+    handlers: { getIpData: async };
+  };
+})();
+state.data = { elements: {}, styles: {}, handlers: { getData: () => {} } };
 
 // + Functions +
 
@@ -23,9 +28,29 @@ export const init = function () {
   // Values
   const stateData = state.data;
 
-  // Set
-  stateData['elements'] = returnElements();
-  stateData['styles'] = returnStyles(stateData['elements']);
+  // - Set -
+
+  // Standard
+  stateData.elements = returnElements();
+  stateData.styles = returnStyles(stateData.elements);
+
+  // Custom
+
+  // - Handlers -
+
+  // Get data
+  stateData.handlers.getData = async function () {
+    try {
+      // Do something
+
+      // Return
+      return true
+
+      // Log
+    } catch (err) {
+      throw err;
+    }
+  };
 };
 
 // Test data

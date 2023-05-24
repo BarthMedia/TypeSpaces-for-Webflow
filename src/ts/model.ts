@@ -16,7 +16,7 @@ export const state = new (class {
   data: {
     elements: object;
     styles: object;
-    handlers: { getIpData: async };
+    handlers: { getData: async };
   };
 })();
 state.data = { elements: {}, styles: {}, handlers: { getData: () => {} } };

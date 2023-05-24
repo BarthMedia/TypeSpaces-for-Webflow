@@ -20,8 +20,8 @@ class WebflowView {
   }
 
   // Define
-  #elements;
-  #styles;
+  #elements: any;
+  #styles: any;
 
   // Event listeners
   addHandler(handler, events = ['load', 'pageshow'], object = window) {

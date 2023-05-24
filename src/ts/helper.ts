@@ -34,6 +34,27 @@ export function stringToArray(
   return arr;
 }
 
+// Get translated region name
+export function getTranslatedRegionName(
+  countryCode: string,
+  language: boolean | string = false
+) {
+  // Define
+  const regionNames = new Intl.DisplayNames(
+    [
+      language !== false
+        ? language.toString().toLowerCase()
+        : countryCode.toLowerCase(),
+    ],
+    {
+      type: 'region',
+    }
+  );
+
+  // Return
+  return regionNames.of(countryCode.toUpperCase());
+}
+
 // Timeout
 export const timeout = function (s: number) {
   // Return

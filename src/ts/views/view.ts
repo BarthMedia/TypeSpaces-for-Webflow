@@ -10,13 +10,13 @@ import * as config from '../config';
 // Base WebflowView
 class WebflowView {
   // Initialize
-  init(stateData: any) {
+  init(state: any) {
     // Values
     const _this = this;
-    this.#styles = stateData.styles;
+    this.#styles = state.styles;
 
     // Elements
-    this.#elements = stateData.elements;
+    this.#elements = state.elements;
   }
 
   // Define

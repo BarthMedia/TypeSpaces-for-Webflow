@@ -21,7 +21,7 @@ const main = function () {
   model.init();
 
   // Initialize view
-  view.init(model.state.data);
+  view.init(model.state);
 
   // Test
   controlTest();

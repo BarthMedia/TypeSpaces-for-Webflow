@@ -13,38 +13,34 @@ import { getJson } from './helper';
 
 // State
 export const state = new (class {
-  data: {
-    elements: object;
-    styles: object;
-    handlers: { getData: async };
-  };
+  elements: object;
+  styles: object;
+  handlers: { getData: async };
+  data: any;
 })();
-state.data = { elements: {}, styles: {}, handlers: { getData: () => {} } };
+state.handlers = { getData: () => {} };
 
 // + Functions +
 
 // Initialize
 export const init = function () {
-  // Values
-  const stateData = state.data;
-
   // - Set -
 
   // Standard
-  stateData.elements = returnElements();
-  stateData.styles = returnStyles(stateData.elements);
+  state.elements = returnElements();
+  state.styles = returnStyles(state.elements);
 
   // Custom
 
   // - Handlers -
 
   // Get data
-  stateData.handlers.getData = async function () {
+  state.handlers.getData = async function () {
     try {
       // Do something
 
       // Return
-      return true
+      return true;
 
       // Log
     } catch (err) {

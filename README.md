@@ -1,6 +1,6 @@
 # Webflow Large-Scale Software Development Kit
 
-A minimalist template repository for building rich native JavaScript/jQuery applications for Webflow.
+A minimalist template repository for building rich native TypeScript/JavaScript/jQuery/CSS applications for Webflow.
 
 ---
 

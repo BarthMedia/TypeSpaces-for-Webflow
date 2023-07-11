@@ -36,7 +36,7 @@ A minimalist template repository for building rich native TypeScript/JavaScript/
 ### Using Desktop
 
 1. Download the [file (/zip)](https://github.com/BarthMedia/codespaces-for-webflow/archive/refs/heads/main.zip) and open it in Visual Studio Code.
-2. Open the terminal and type `npm i`, then `npm start`. (`npm i --legacy-peer-deps` for Windows currnetly `11.07.2023`)
+2. Open the terminal and type `npm i`, then `npm start`. (`npm i --legacy-peer-deps` for Windows currently `11.07.2023`)
 3. Press `http://localhost:1234`.
 4. Follow the instructions on the bmg.studio documentation page to integrate with your Webflow project.
 

@@ -5,7 +5,8 @@
   "default": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --dist-dir ./dist --no-source-maps"
+    "build": "parcel build src/index.html --dist-dir ./dist --no-source-maps",
+    "check": "tsc --noEmit"
   },
   "author": "Leon B. Barth",
   "license": "MIT",

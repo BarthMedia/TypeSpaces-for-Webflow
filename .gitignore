@@ -1,0 +1,6 @@
+node_modules
+.parcel-cache
+.DS_Store
+legacy_studioForm.js
+notes.js
+dist
